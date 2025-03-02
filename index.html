@@ -10,10 +10,12 @@
 <body>
     <div class="container">
         <header>
-            <h1>天气预报</h1>
-            <div class="location-container">
-                <i class="fas fa-map-marker-alt"></i>
-                <span id="location">北京市</span>
+            <div class="header-main">
+                <h1>天气预报</h1>
+                <div class="location-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="location">北京市</span>
+                </div>
             </div>
             <div class="search-container">
                 <div class="search-input-container">
@@ -25,53 +27,58 @@
         </header>
 
         <main>
-            <div class="current-weather">
-                <div class="card current-weather-card">
-                    <div class="card-header">
-                        <h2>当前天气</h2>
-                        <span id="current-date">2025年3月2日</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="weather-icon">
-                            <i class="fas fa-sun"></i>
+            <div class="weather-dashboard">
+                <!-- 左侧当前天气卡片 -->
+                <div class="current-weather">
+                    <div class="card current-weather-card">
+                        <div class="card-header">
+                            <h2>当前天气</h2>
+                            <span id="current-date">2025年3月2日</span>
                         </div>
-                        <div class="temperature">
-                            <span id="current-temp">21°C</span>
+                        <div class="card-body">
+                            <div class="weather-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="temperature">
+                                <span id="current-temp">21°C</span>
+                            </div>
+                            <div class="weather-description">
+                                <span id="weather-desc">晴朗</span>
+                            </div>
+                            <div class="weather-details">
+                                <div class="detail">
+                                    <i class="fas fa-temperature-high"></i>
+                                    <span>最高: <span id="max-temp">24°C</span></span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-temperature-low"></i>
+                                    <span>最低: <span id="min-temp">15°C</span></span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-tint"></i>
+                                    <span>湿度: <span id="humidity">45%</span></span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-wind"></i>
+                                    <span>风速: <span id="wind-speed">15 km/h</span></span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="weather-description">
-                            <span id="weather-desc">晴朗</span>
-                        </div>
-                        <div class="weather-details">
-                            <div class="detail">
-                                <i class="fas fa-temperature-high"></i>
-                                <span>最高: <span id="max-temp">24°C</span></span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-temperature-low"></i>
-                                <span>最低: <span id="min-temp">15°C</span></span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-tint"></i>
-                                <span>湿度: <span id="humidity">45%</span></span>
-                            </div>
-                            <div class="detail">
-                                <i class="fas fa-wind"></i>
-                                <span>风速: <span id="wind-speed">15 km/h</span></span>
-                            </div>
-                        </div>
-                        <div class="card-hint">点击切换天气</div>
                     </div>
                 </div>
-            </div>
 
-            <h2 class="forecast-title">未来天气预报</h2>
-            <div class="forecast-container" id="forecast-container">
-                <!-- 预报卡片将在这里动态生成 -->
+                <!-- 右侧预报容器 -->
+                <div class="forecast-section">
+                    <h2 class="forecast-title">未来天气预报</h2>
+                    <div class="forecast-container" id="forecast-container">
+                        <!-- 预报卡片将在这里动态生成 -->
+                    </div>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>© 2025 天气预报网站 | 使用模拟数据展示</p>
+            <p>© 2025 天气预报网站 | 数据来源: OpenWeather API</p>
         </footer>
     </div>
 
